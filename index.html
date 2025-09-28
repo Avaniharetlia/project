@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salary Predictor | Made by Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💻 Salary Prediction</h1>
+        <p>Made with 💙 by Me</p>
+        <form action="/predict" method="post">
+            <label for="experience">🔢 Enter Your Experience (in years):</label>
+            <input type="text" name="experience" placeholder="e.g., 2.5" required>
+            <button type="submit">Predict Salary</button>
+        </form>
+        <div class="result">
+            {% if prediction_text %}
+                <h3>{{ prediction_text }}</h3>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
